@@ -1,0 +1,658 @@
+<style>
+  body
+  {
+    font-family: 'Arial';
+  }
+
+  .smallSize
+  {
+    font-size: 14px;
+  }
+  .mediumSize
+  {
+    font-size: 20px;
+  }
+  .largeSize
+  {
+    font-size: 35px;
+  }
+
+  .blueColor
+  {
+    color: #4154F1;
+  }
+
+  .darkblueColor
+  {
+    color: #012970;
+  }
+
+  .menu
+  {
+
+  }
+
+  .menu a
+  {
+    color: #012970; 
+    font-size: 35px; 
+    font-weight: bold;
+  }
+  
+  .sitebg
+  {
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Logo
+  {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 1.1;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    animation: floatText 3s ease-in-out infinite;
+    font-style: italic;
+    -webkit-text-stroke: 3px white;"
+  }
+
+  @keyframes floatText {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+
+  .btnLogo
+  {
+    color: white;
+    font-size: 20px; 
+    font-weight: bold; 
+    background: #4154F1;
+    margin-top: 40px;
+    position: absolute;
+    left: 12%;
+    top: 70%;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+  }
+
+  /*Sự kiện sắp diễn ra*/
+  .text
+  {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: #012970;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;"
+  }
+  .event-box 
+  {
+    background-color: #e6f7ff;
+    transition: 0.3s;
+  }
+  .event-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  }
+
+  /*Nút tham gia ngay*/
+  .button
+  {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    background: #4154F1;
+    margin-top: 20px;
+  }
+
+  /*Khung Thời gian còn lại của sự kiện sắp diễn ra*/
+   body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7ff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1f2b6c;
+      margin-top: 50px;
+      font-size: 40px;
+    }
+
+    /* Vùng chứa 3 ô sự kiện */
+    .event-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    /* Card sự kiện */
+    .event-box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      width: 300px;
+      padding: 25px 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .event-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    .event-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1f2b6c;
+      margin-bottom: 8px;
+    }
+
+    .event-date {
+      color: #444;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #2a2a7a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1a1a60;
+    }
+
+    /* Phần thời gian đếm ngược */
+    .Time {
+      margin-top: 20px;
+    }
+
+    .ConLai {
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .KhungThoiGian {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .KhungNho {
+      background: #f1f3ff;
+      border-radius: 8px;
+      padding: 8px 10px;
+      width: 55px;
+    }
+
+    .So {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1f2b6c;
+    }
+
+    .Chu {
+      font-size: 11px;
+      color: #666;
+    }
+  /*Tin tức*/
+  .TinTuc
+  {
+    width: 100%; 
+    height: 400px;"
+  }
+
+  .TinMoiNhat
+  {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: #012970;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;"
+  }
+
+  .box
+  {
+    float: left;
+    width: 20%;
+    height: 300px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+  }
+
+  .KhungNgayThang
+  {
+    width: 100%; 
+    height: 12%;
+  }
+
+  .textNgayThang
+  {
+    width: 30%;
+    height: 100%;
+    color: white;
+    background: #4154F1;
+    text-align: center;
+    line-height: 100%;
+    font-size: 25px;"
+  }
+
+  .KhungNoiDung
+  {
+    height: 88%;
+  }
+
+  .KhungTieuDe
+  {
+    float:end;
+    height: 58%;
+  }
+
+  .TieuDe
+  {
+    margin-top: 20px;
+    font-size: 25px;
+    padding-left: 30px;
+  }
+
+  .NoiDung
+  {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .divTimHieuThem
+  {
+    clear: both;height: 30%;
+  }
+
+  .ReadMore
+  {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+
+  /*Đội ngũ*/
+  .divDoiNgu
+  {
+    width: 100%; 
+    height: 600px;
+  }
+
+  .pDoiNguSportZone
+  {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: #012970;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  .team-container
+  {
+    margin-top: 100px;
+    height: 500px;
+  }
+  
+  .team-member
+  {
+    float: left;
+    width: 20%;
+    height: 600px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+  }
+
+  .team-container .team-member p
+  {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .team-container .team-member img
+  {
+    margin-left: 30%;
+    width: 40%;
+    height: 35%;
+    margin-top: 50px;
+    border-radius:50%; 
+    object-fit:cover;
+  }
+
+  .team-container .team-member .small
+  {
+    width: 100%; 
+    text-align: center; 
+    font-size: 18px;
+    margin-top: 0px;
+  }
+
+  .team-container .team-member .large
+  {
+    width: 100%; 
+    text-align: center; 
+    margin-top: 40px; 
+    font-size: 25px;
+  }
+
+  /*  Hiệu ứng mờ và nổi bật khi hover */
+  .team-container:hover .team-member {
+    opacity: 0.4;
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+  }
+
+  .team-member:hover {
+    opacity: 1 !important;
+    transform: scale(1.05);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+  }
+
+  
+  .divDoiTac
+  {
+    width: 100%;
+    height: 300px;
+  }
+
+  .pDoiTac
+  {
+    width: 100%; 
+    text-align: center; 
+    font-size: 40px; 
+    margin-top: 100px; 
+    color: #012970; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold;
+  }
+
+  .logo-item {
+    width:150px; 
+    height:150px; 
+    overflow:hidden; 
+    border-radius:10px; 
+    padding:10px; 
+    background:#fff; 
+    box-sizing:border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .logo-img
+  {
+    width:100%; 
+    height:100%; 
+    object-fit:contain; 
+    border-radius:10px;
+  }
+
+  .logo-track {
+    position: relative;
+    overflow: hidden;
+    width:60%; 
+    margin:0 auto; 
+    height:150px; 
+    overflow:hidden;
+  }
+
+  .logo-inner
+  {
+    display:flex; 
+    align-items:center; 
+    gap:30px; 
+    width:max-content; 
+    animation:scrollLogos 25s linear infinite; 
+    padding:0 25px;
+  }
+
+  @keyframes scrollLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+
+  .logo-track:hover .logo-inner,
+  .logo-inner:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-item:hover {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  }
+  .logo-item img {
+    transition: transform 0.4s ease;
+  }
+  .logo-item:hover img {
+    transform: scale(1.05);
+  }
+  /
+  .logo-track:has(.logo-item:hover) .logo-inner {
+    animation-play-state: paused;
+  }
+
+  .divSukien
+  {
+    width: 100%; 
+    height: 600px;
+  }
+
+  .pSuKien
+  {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: #012970;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  .SuKien
+  {
+    margin-top: 100px;
+    height: 500px;
+  }
+
+  .SuKienContainer
+  {
+    float: left;
+    width: 20%;
+    height: 450px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+  }
+
+  .NoiDungSuKien
+  {
+    float: end;
+    width: 100%; 
+    height: 70%;
+    background: ;
+  }
+
+  .NoiDungSuKien img
+  {
+    object-fit:cover;
+    width: 100%;
+    height: 60%;
+  }
+
+  .NoiDungSuKien .Title
+  {
+    color: #012970;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 30px;
+    width: 100%;  
+    font-size: 25px;
+  }
+
+  .NoiDungSuKien .phanLoai
+  {
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 30px;
+    width: 100%;  
+    font-size: 18px;
+  } 
+
+  .LienHe
+  {
+    width: 100%; 
+    height: 300px;
+    border: 3px solid #E6E6FA; 
+    background: #F8F8FF;
+    margin-top: 30px;
+  }
+
+  .LienHe p
+  {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .LienHe form
+  {
+    width: 35%;
+    height: 60px;
+    margin-left: 32%;
+    margin-top: 20px;
+  }
+
+  .LienHe form button
+  {
+    color: white;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 0px;
+  }
+
+  .footer
+  {
+    font-family: 'Arial';
+    height: 500px;
+    background: #f3f2f0;
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0; 
+  }
+
+  .footer div
+  {
+    width: 25%; 
+    float: left; 
+    box-sizing: border-box;
+  }
+
+  .footer form
+  {
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    max-width: 90%; 
+    font-size: 14px;
+  }
+
+  .footer p.Title
+  {
+    font-weight: bold; 
+    font-size: 20px; 
+    margin: 5px 0;
+  }
+
+  .footer p
+  {
+     font-size: 17px;
+     margin: 5px 0;
+  }
+
+  .footer span
+  {
+    font-size: 20px; 
+    font-weight: bold;
+  }
+
+  .footer a
+  {
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .footer label
+  {
+    color: #212514;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .footer input
+  {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .footer button
+  {
+    width: 100%;
+    background-color: #f4aa63;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .footer textarea
+  {
+    width: 100%;
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    resize: none; 
+    box-sizing: border-box;
+  }
+</style>
